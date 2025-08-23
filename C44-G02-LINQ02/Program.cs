@@ -641,9 +641,6 @@ namespace C44_G02_LINQ02
 
             #endregion
 
-
-
-         
             #region LINQ – Transformation Operators
 
             #region 1. Return a sequence of just the names of a list of products.
