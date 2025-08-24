@@ -601,16 +601,16 @@ namespace C44_G02_LINQ02
                 words = g.ToList()
             });
 
-            //foreach (var item in firstleteer)
+            foreach (var item in firstleteer)
 
-            //{
-            //    Console.WriteLine($"first letter => {item.w}");
-            //    foreach (var w in item.words)
-            //    {
-            //        Console.WriteLine(w);
-            //    }
+            {
+                Console.WriteLine($"first letter => {item.w}");
+                foreach (var w in item.words)
+                {
+                    Console.WriteLine(w);
+                }
 
-            //}
+            }
             #endregion
 
 
