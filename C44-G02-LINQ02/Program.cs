@@ -537,7 +537,7 @@ namespace C44_G02_LINQ02
             Console.WriteLine("3. Return a grouped a list of products only for categories that have all of their products in stock.");
             Console.WriteLine("------------------------------------------");
 
-            var groupallinstock = ListGenerators.ProductList.GroupBy(e => e.Category).Where(x => x.Any(p => p.UnitsInStock != 0)).Select(g => new
+            var groupallinstock = ListGenerators.ProductList.GroupBy(e => e.Category).Where(x => x.All(p => p.UnitsInStock != 0)).Select(g => new
             {
                 category = g.Key,
                 product = g.ToList()
