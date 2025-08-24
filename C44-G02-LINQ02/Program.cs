@@ -207,6 +207,7 @@ namespace C44_G02_LINQ02
                 Console.WriteLine(item);
             }
             #endregion
+            Console.Clear();
 
             #region 11. Get the products with the cheapest price in each category (Use Let)
             Console.WriteLine();
@@ -381,7 +382,7 @@ namespace C44_G02_LINQ02
             Console.WriteLine("------------------------------------------");
             Console.WriteLine();
 
-            var CustomerinWashington = ListGenerators.CustomerList.Where(c => c.City == "Washington").SelectMany(o => o.Orders).Take(3).ToList();
+            var CustomerinWashington = ListGenerators.CustomerList.Where(c => c.Region == "WA").SelectMany(o => o.Orders).Take(3).ToList();
             if (CustomerinWashington.Any())
             {
 
@@ -404,7 +405,7 @@ namespace C44_G02_LINQ02
             Console.WriteLine("------------------------------------------");
             Console.WriteLine();
 
-            var allcustomer = ListGenerators.CustomerList.Where(c => c.City == "Washington").SelectMany(o => o.Orders.Skip(2), (c, o) => new
+            var allcustomer = ListGenerators.CustomerList.Where(c => c.Region == "WA").SelectMany(o => o.Orders.Skip(2), (c, o) => new
             {
                 Customername = c.CustomerName,
                 city = c.City,
@@ -600,16 +601,16 @@ namespace C44_G02_LINQ02
                 words = g.ToList()
             });
 
-            foreach (var item in firstleteer)
+            //foreach (var item in firstleteer)
 
-            {
-                Console.WriteLine($"first letter => {item.w}");
-                foreach (var w in item.words)
-                {
-                    Console.WriteLine(w);
-                }
+            //{
+            //    Console.WriteLine($"first letter => {item.w}");
+            //    foreach (var w in item.words)
+            //    {
+            //        Console.WriteLine(w);
+            //    }
 
-            }
+            //}
             #endregion
 
 
